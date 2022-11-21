@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Numerator: <input type="text" id="num"><br>
+        Denominator: <input type="text" id="den"><br>
+        <button type="submit" onclick="check()">Check</button><br>
+    </form>
+
+    <script>
+        function check(){
+            let num = document.getElementById("num").value
+            let den = document.getElementById("den").value
+            console.log(den)    
+            if(den==0){
+                alert("Denominator can not be zero")
+            }else{
+                const res = num/den
+                alert(res)
+            }
+        }       
+    </script>
+</body>
+</html>
