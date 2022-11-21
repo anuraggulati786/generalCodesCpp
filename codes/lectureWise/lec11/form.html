@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(":input").css("background-color","lightblue");
+            $('[name="1"]').css("color","lightgreen");
+            // $("input").css("color","lightgreen");
+        });
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="">Name: </label>
+        <input type="text" name="1" id=""><br>
+        <label for="">Age: </label>
+        <input type="text"><br>
+        <label for="">Designation: </label>
+        <input type="text">
+
+        <p>Which is your favorite programming language?</p>
+        <input type="radio" name="radio" id="">
+        <label for="" name="">C++</label><br>
+        <input type="radio" name="radio" id="">
+        <label for="">Java</label><br>
+        <input type="radio" name="radio" id="">
+        <label for="">Python</label>
+
+        <p>Select your hobbies:</p>
+        <input type="checkbox" name="" id="">
+        <label for="">Music</label><br>
+        <input type="checkbox" name="" id="">
+        <label for="">Dancing</label><br>
+        <input type="checkbox" name="" id="">
+        <label for="">Book reading</label><br>
+        <input type="checkbox" name="" id="">
+        <label for="">Swimming</label><br><br>
+
+        <input type="week" name="" id=""><br><br>
+
+        <button>Submit</button>
+    </form>
+</body>
+</html>
