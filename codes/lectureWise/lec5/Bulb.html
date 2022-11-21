@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Bulb</h1>
+
+
+    <div style="text-align: center;">
+        <!-- <button onclick="document.getElementById('bulb').src='pic_bulboff.gif' ">ON/OFF</button> -->
+        <!-- <button onclick="toggle()">ON/OFF</button> -->
+        <!-- <button onclick="document.getElementById('bulb').src='pic_bulbon.gif' ">ON</button> -->
+        
+        <img src="pic_bulboff.gif" onclick="toggle()" id="bulb" alt="">
+        <!-- <img src="pic_bulboff.gif" onmouseover="toggle()" id="bulb" alt=""> -->
+
+        <form action="" onsubmit="formSubmit()">
+            Enter Name: <input type="text" name="val" id="">
+            <button type="submit" onclick="formValue()">Submit</button>
+        </form>
+
+        <script>
+            let x=0;
+
+            function formValue(){
+                console.log(document.forms[0].val.value);
+            }
+
+            function formSubmit(){
+                alert("Form is submitted");
+            }
+           
+            function toggle(){
+                if(x===0){
+                    document.getElementById("bulb").src="pic_bulbon.gif";
+                    x=1;
+                }else{
+                    document.getElementById("bulb").src="pic_bulboff.gif";
+                    x=0;
+                }
+            }
+            
+            setInterval(function() {
+                document.getElementById("bulb").click();
+            }, 2000);
+
+        </script>
+    </div>
+</body>
+</html>
