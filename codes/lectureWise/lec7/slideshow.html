@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" id="slideshow"><br>
+    <button onclick="x=setInterval(slideshow, 1000)">Start</button>
+    <button onclick="clearTimeout(x)">Stop</button>
+    <script>
+        let i=0
+        function slideshow(){
+            let control = document.getElementById("slideshow");
+            switch(i){
+                case 0:
+                    control.src="img1.jpg";
+                    break;
+                case 1:
+                    control.src="img2.jpg";
+                    break;
+                case 2:
+                    control.src="img3.jpg";
+                    break;
+                case 3:
+                    control.src="img4.jpg";
+                    break;
+                case 4:
+                    control.src="img5.jpg";
+                    break;
+                case 5:
+                    control.src="img6.jpg";
+                    break;
+            }
+            i++;
+        }
+    </script>
+</body>
+</html>
