@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="age"></p>
+
+    <script>
+        const text = `{
+           "name": "Kunal",
+           "age": "function(){return 15}",
+           "city": "SF" 
+        }`;
+        // console.log(text);
+        const obj = JSON.parse(text);
+        // console.log(obj);
+        obj.age = eval("(" +obj.age+ ")");
+        console.log(obj.age());
+        document.getElementById("age").innerHTML = obj.age();
+    </script>
+</body>
+</html>
