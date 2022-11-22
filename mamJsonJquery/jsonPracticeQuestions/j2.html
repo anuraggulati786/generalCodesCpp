@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Parsing a JSON Array.</h2>
+<p>Data written as an JSON array will be parsed into a JavaScript array.</p>
+<p id="demo"></p>
+
+<script> 
+    
+const cars = '[ "Fortuner", "BMW", "Creta", "XUV" ]';
+const myArr = JSON.parse(cars);
+console.log(myArr);
+
+document.getElementById("demo").innerHTML = myArr[0];
+</script>
+
+</body>
+</html>
