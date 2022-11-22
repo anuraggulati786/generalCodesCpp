@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        Numerator: <input type="text">
+        Denominator: <input type="text">
+        <button onclick="func()">Submit</button>
+    </form>
+</body>
+<script>
+    function func() {
+        const frm = document.querySelector("input").value;
+        const frm2 = document.querySelectorAll("input");
+        const frm3 = frm2[1].value;
+        // const val = frm.value;
+        // console.log(frm3);
+        console.log(10);
+        if (frm3 == 0) {
+            alert("val is " + frm3 + " insert valid value");
+        }
+        else {
+            alert("val is " + frm3 / frm)
+        }
+
+    }
+</script>
+
+</html>

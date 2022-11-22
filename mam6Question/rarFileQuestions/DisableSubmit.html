@@ -1,0 +1,32 @@
+<!-- when check box is checked then only submit button will be enabled otherwise it should be disabled -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".enable").click(function () {
+                if ($(".button").is(':disabled')) {//to chk button is disabled or not in .button class
+                    $(".button").removeAttr('disabled');
+                }
+                else {
+                    $(".button").attr('disabled', 'disabled');
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <input class="enable" type="checkbox">
+    <label for="">Click here to enable submit button</label><br>
+    <button disabled="disabled" class="button">Submit</button>
+</body>
+
+</html>

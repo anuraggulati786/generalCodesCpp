@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        div {
+            background-color: aqua;
+            width: 100vw;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            border: 2px solid lightcyan;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="clk">Remove</button>
+    </div>
+    <h1 style="text-align:center"></h1>
+</body>
+<script>
+    let ele = document.querySelector("h1");
+    document.querySelector("div").addEventListener("mousemove", func);
+    document.querySelector("#clk").addEventListener("click", endFunc);
+
+    function func() {
+        console.log("here");
+        let val = Math.floor(Math.random() * 10) + 1;
+        ele.innerHTML = val;
+    }
+    function endFunc() {
+        document.querySelector("div").removeEventListener("mousemove", func);
+    }
+</script>
+
+</html>

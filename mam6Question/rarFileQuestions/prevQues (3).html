@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("img").click(function(){
+            //     $(this).hide();
+            // })
+
+            $("img").click(function(){
+                $(this).attr("src","xi-modified.png");
+            })
+            
+            $("#btn").click(function(){
+                let num1 = parseInt($("#num1").val());
+                let num2 = parseInt($("#num2").val());
+                let ans;
+                if(num1!=num2){
+                    ans = num1+num2;
+                }else{
+                    ans = num1*3;
+                }
+                $("#result").text(ans);
+            })
+
+            $("#chg").click(function(){
+                $("#text").css("background-color","cyan");
+            })
+
+            $("#tb").hover(function(){
+                $("#1").css("background-color","pink");
+                $("#2").css("background-color","yellow");
+                $("#3").css("background-color","green");
+            },function(){
+                $("tr").css("background-color","white");
+            })
+
+            $("#zoom").hover(function(){
+                $(this).css({"height":"50px","width":"300px"})
+            },function(){
+                $(this).css({"height":"auto","width":"auto"})
+            })
+
+            $("#hello").click(function(){
+                let fname = prompt("Please enter your first name")
+                let lname = prompt("Please enter your last name")
+
+                alert("Hello "+ fname +" "+ lname)
+            })
+         })
+
+        
+    </script>
+    <style>
+        img {
+            height: 200px;
+            width: 200px;
+        }
+        #text {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>WARNING: Don't Look Up!</p>
+        <p class="loader"><img src="putin-modified.png" style srcset=""></p>
+    </div>
+    <label for="">Enter a number:</label>
+    <input type="number" id="num1"><br>
+    <label for="">Enter a number:</label>
+    <input type="number" id="num2"><br>
+    <button id="btn">Calculate</button>
+    <p id="result"></p>
+    <label for="">Write some text:</label>
+    <input type="text" id="text"><br>
+    <button id="chg">Submit</button>
+    <br><br>
+    <table id="tb">
+        <tr id="1">
+            <td>Country</td>
+            <td>Capital</td>
+        </tr>
+        <tr id="2">
+            <td>China</td>
+            <td>Beijing</td>
+        </tr>
+        <tr id="3">
+            <td>India</td>
+            <td>Delhi</td>
+        </tr>
+    </table>
+    <br>
+    <label for="">Enter:</label>
+    <input type="text" name="" id="zoom">
+    <br><br>
+    <button id="hello">Click Me!</button>
+</body>
+</html>

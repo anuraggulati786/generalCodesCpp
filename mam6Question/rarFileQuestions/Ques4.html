@@ -1,0 +1,128 @@
+<!--Create a table with 3 rows and cols adn write a js code to change the color of 1st row to pink, 2nd row yellow, 3rd row to green when you move the mouse over row and it should come to back to orignal color when mouse out-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            ;
+        }
+
+        body {
+            background-color: rgb(241, 239, 236)
+        }
+
+        table {
+            border-collapse: collapse;
+            /* height: 50px; */
+        }
+
+        table,
+        tr,
+        th,
+        td {
+            padding: 15px;
+            border: 2px solid black;
+        }
+
+        .center {
+            /* width: 100vw; */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <table>
+            <tr class="clr1">
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+            <tr class="clr2">
+                <td>Sahil</td>
+                <td>21</td>
+                <td>Male</td>
+            </tr>
+            <tr class="clr3">
+                <td>Raj</td>
+                <td>21</td>
+                <td>Male</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        let var1, var2, var3;
+        var1 = document.querySelector(".clr1");
+        var2 = document.querySelector(".clr2");
+        var3 = document.querySelector(".clr3");
+
+        var1.addEventListener("mouseover", chngClr1);
+        function chngClr1() {
+            // console.log("hi");
+            let clickedEle = event.target;
+            let par = clickedEle.parentNode;
+            // console.log(par);
+            par.style.backgroundColor = "pink";
+        }
+        var1.addEventListener("mouseout", chngClr4);
+        function chngClr4() {
+            // console.log("hi");
+            let clickedEle = event.target;
+            let par = clickedEle.parentNode;
+            // console.log(par);
+            par.style.backgroundColor = "white";
+        }
+
+
+        var2.addEventListener("mouseover", chngClr2);
+        function chngClr2() {
+            // console.log("hi");
+            let clickedEle = event.target;
+            let par = clickedEle.parentNode;
+            // console.log(par);
+            par.style.backgroundColor = "yellow";
+        }
+        var2.addEventListener("mouseout", chngClr5);
+        function chngClr5() {
+            // console.log("hi");
+            let clickedEle = event.target;
+            let par = clickedEle.parentNode;
+            // console.log(par);
+            par.style.backgroundColor = "white";
+        }
+
+
+        var3.addEventListener("mouseover", chngClr3);
+        function chngClr3() {
+            // console.log("hi");
+            let clickedEle = event.target;
+            let par = clickedEle.parentNode;
+            // console.log(par);
+            par.style.backgroundColor = "green";
+        }
+        var3.addEventListener("mouseout", chngClr6);
+        function chngClr6() {
+            // console.log("hi");
+            let clickedEle = event.target;
+            let par = clickedEle.parentNode;
+            // console.log(par);
+            par.style.backgroundColor = "white";
+        }
+        console.log("erh");
+    </script>
+</body>
+
+</html>

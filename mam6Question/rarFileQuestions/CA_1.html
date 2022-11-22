@@ -1,0 +1,131 @@
+<!-- Slide show 1 screen to show photos and two button 1 for starting once and another for stoping slideshow -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: aqua;
+            height: 100vh
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+        }
+
+        .paddng {
+
+            margin-left: 20vw;
+            height: 100px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+        }
+
+        img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .upper {
+            margin-left: 20vw;
+            position: relative;
+            bottom: 90px;
+            left: 80px;
+            /* margin-bottom: 20vh; */
+            width: 100px;
+            height: 100px;
+        }
+
+        .Time {
+            position: relative;
+            bottom: 20px;
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 style="text-align: center;"> Running man game</h1>
+        <img class="upper" src="img5.png" alt="">
+        <div class="flex">
+            <!-- <h3>Running Time</h3> -->
+            <img class="pic" src="img1.png" alt="">
+            <div class="paddng">
+                <button onclick="func()"> Start</button>
+                <button onclick="stop()">Stop</button>
+                <h1 class="Time"></h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    let upper = document.querySelector(".upper");
+    let bl = 1;
+    let logo = setInterval(function () {
+        if (bl == 1) {
+
+            upper.src = "img6.png";
+            bl = 0;
+        }
+        else {
+            upper.src = "img5.png";
+            bl = 1;
+        }
+    }, 500);
+
+
+
+    let ele1 = document.querySelector(".Time");
+    let ele = document.querySelector(".pic");
+    let img = []; //initializing arr
+    for (let i = 1; i < 5; i++) {
+        img[i] = `img${i}.png`;
+    }
+
+    let end;
+    function func() {
+
+        let i = 0;
+        let cnt = 1;
+        end = setInterval(function () {
+            ele.src = img[cnt];
+            ele1.innerText = i;
+            i++;
+            // console.log("here");
+            cnt++;
+            if (cnt == 4) {
+                cnt = 1;
+            }
+        }, 1000);
+    }
+
+    // ele.src = img[0];
+    function stop() {
+        clearInterval(end);
+        clearInterval(end2);
+        // console.log(" here");
+        // ele.src = img[0];
+    }
+
+</script>
+
+</html>

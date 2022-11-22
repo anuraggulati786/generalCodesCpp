@@ -1,0 +1,38 @@
+<!-- Using Jquery how would you hide the image when the user clicks it for the following code snippet?
+   <div class="content">
+     <p>Some content </p>
+     <p class="loader">
+         <img src="ajax-loader.gif">
+     </p>
+    </div> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="/Jquery/jquery1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".content").click(function () {
+                $("img").hide();
+            })
+        });
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <p>Some Content</p>
+        <p class="loader">
+            <img src="ajax-loader.gif">
+        </p>
+    </div>
+    <p class="js">210</p>
+    <input class="fst" type="text">
+    <input class="snd" type="text">
+    <button class="btn">Button</button>
+    <h1 class="outpt"></h1>
+    <script src="ques2.js"></script>
+</body>
+
+</html>
