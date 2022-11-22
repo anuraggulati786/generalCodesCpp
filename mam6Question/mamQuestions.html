@@ -1,0 +1,146 @@
+<!-- question 1 -->
+
+<!-- How would you hide the image when the user clicks it for the following code snippets? -->
+
+<html>
+    <head>
+        <title>Anurag</title>
+    </head>
+    <body>
+        <img id="ig" src="/pic_bulboff.gif" alt="img">
+        <p>hello world</p>
+
+    </body>
+    <script src="/jquery-3.6.1.min.js"></script>
+    <script>
+        $('p').click(function(){
+            $('#ig').hide()
+        })
+    </script>
+</html>
+
+
+
+
+<!-- question 2
+How would you hide the image when the user clicks it for the following code snippets? -->
+
+<html>
+    <head>
+        <title>Anurag</title>
+    </head>
+    <body>
+       
+    </body>
+    <script src="/jquery-3.6.1.min.js"></script>
+    <script>
+       
+        function fun()
+        {
+            let x=3;
+            let y=3;
+            let sum;
+            let mul=1;
+            if(x==y){
+                mul=x*x*x;
+                return mul;
+            }
+            else
+            {
+                sum=x+y;
+            }
+            return sum;
+            
+    }
+
+    document.write("the value is  : " + fun())
+    </script>
+</htm>
+
+
+
+
+
+<!-- 
+question 3
+Write a js code that changes the image when the change image 
+button is clicked (note image should already be displayed on the opening web page). -->
+
+
+<html>
+    <head>
+        <title>Anurag</title>
+    </head>
+    <body>
+      
+        <img src="/pic_bulboff.gif"  id="off" ><br>
+        <button type="button" onclick="fun()">clickme</button>
+
+    </body>
+    <script src="/jquery-3.6.1.min.js"></script>
+    <script>
+ 
+        function fun()
+        {
+            off.src="/pic_bulbon.gif"
+        }
+
+    </script>
+</htm>
+
+
+
+
+
+<!-- question 4
+Create a js code to create a web page prompts user to enter first name and last name as two strings and 
+on submitting alert will be generated that will show the message as "Hello Full Name of User". -->
+
+<html>
+    <head>
+        <title>Anurag</title>
+    </head>
+    <body>
+        
+    </body>
+    <script src="/jquery-3.6.1.min.js"></script>
+    <script>
+
+
+        let x=prompt("Enter first name")
+        let y=prompt("Enter last name")
+        alert("hello"+ " "+x+ " " + y)
+
+
+    </script>
+</html>
+
+
+
+<!-- 
+question 5
+Write  a java script program to show zoom in and 
+zoom out on text fields using mouse over and mouse out event -->
+
+<html>
+    <head>
+        <title>Anurag</title>
+    </head>
+    <body>
+        
+        <label for="">Enter Text:</label>
+        <input type="text" name="" id="zoom">
+
+    </body>
+    <script src="/jquery-3.6.1.min.js"></script>
+    <script>
+   
+        $("#zoom").mouseover(function(){
+            $(this).css({"height":"50px","width":"300px"})
+        });
+        $("#zoom").mouseout(function(){
+            $(this).css({"height":"auto","width":"auto"})
+        });
+
+    </script>
+</html>
