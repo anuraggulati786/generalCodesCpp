@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-git.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Find  the class of the clicked element.</title>
+</head>
+<body>
+<p>Click on the color and get the class name.</p>
+<ul class="tabs">
+<li class="red1">Red</li>
+<li class="black2">Black</li>
+<li class="gold3">Gold</li> 
+</ul>
+<script>
+    $("li").click(function() {
+   var colorClass = this.className;
+   console.log(colorClass);
+});
+</script> 
+</body>
+</html>

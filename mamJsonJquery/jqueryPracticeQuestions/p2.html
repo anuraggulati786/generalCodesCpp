@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <title>Disable/enable the form submit button</title>
+  <script>
+    $(document).ready(function(){
+    $('#id1').click(function() {
+	if ($('#btn1').is(':disabled')) {                               // The :disabled selector selects all disabled form elements
+    	$('#btn1').removeAttr('disabled');
+    } else {
+    	$('#btn1').attr('disabled', 'disabled');
+    }
+});
+    });
+  </script>
+</head>
+<body>
+<input id="id1" name="agree" type="checkbox" value="y"/>I agree<br>  
+<input id="btn1" disabled="disabled" name="Submit" type="submit" value="Submit" />
+</body>
+</html>
