@@ -1,0 +1,62 @@
+<!DOCTYPE html>  
+    <head>  
+    
+    <script>  
+    function verifyPassword() {  
+        let phone=document.getElementById("phoneno").value;
+        let namee=document.getElementById("fname").value;
+        let name=document.getElementById("lname").value;
+        let pw = document.getElementById("pswd").value;  
+      if(pw == "") {  
+         document.getElementById("message").innerHTML = "ENTER SOME PASSWORD!!";  
+         return false;  
+      }  
+       
+      
+      if(pw.length < 6) {  
+         document.getElementById("message").innerHTML = "Length must be atleast 6 characters";  
+         return false;  
+      }  
+      if(name.length=="")
+      {
+        document.getElementById("message").innerHTML = "last name shouldnt be empty";  
+         return false;  
+      }
+      if(phone.length<10 && phone.length>10)
+      {
+        document.getElementById("message").innerHTML = "enter valid phone";  
+         return false;  
+      }
+   
+    }  
+    </script>  
+      
+    <body>  
+      
+    <h1>Student Details</h1>  
+     
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label>Email</label>
+    <input type="email" placeholder="enter email" required><br><br>
+    <label for="phoneno">Phone:</label><br>
+    <input type="text" id="phoneno" name="phoneno"><br><br>
+    
+      
+    <form onsubmit ="return verifyPassword()">  
+    
+    <td> Enter Password </td>  
+    <input type = "password" id = "pswd" value = "">   
+    <span id = "message" style="color:red"> </span> <br><br>  
+      
+    
+    <input type = "submit" value = "Submit">  
+      
+    
+    <button type = "reset" value = "Reset" >Reset</button>  
+    </form>  
+   
+    </body>  
+    </html>
